@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "f5f6103c-b92e-4dda-8629-b0e306ccc3a3",
+		"name": "Sanctum-Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16103018"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bahaa.ate16@gmail.com\",\r\n    \"phone_number\": \"0951584337\",\r\n    \"password\":\"bahaa51566009\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}login",
+							"host": [
+								"{{url}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "BahaaA",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "bahaa.ate16@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "0951584337",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "bahaa51566009",
+									"type": "text"
+								},
+								{
+									"key": "c_password",
+									"value": "bahaa51566009",
+									"type": "text"
+								},
+								{
+									"key": "certificate",
+									"type": "file",
+									"src": "/C:/Users/USER/Desktop/Bahaa-Resume.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}register",
+							"host": [
+								"{{url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refersh Token",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api/",
+			"type": "string"
+		}
+	]
+}
